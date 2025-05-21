@@ -6,33 +6,31 @@
   <title>Amask - Gizlilik Politikası</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
-      padding: 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
     .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
       max-width: 800px;
-      margin: 50px auto;
-      padding: 20px 30px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     h1, h2 {
-      color: #2c3e50;
+      color: #1a1a1a;
+    }
+    p, li {
+      color: #333;
+      line-height: 1.6;
     }
     ul {
-      margin-left: 20px;
-    }
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -45,7 +43,7 @@
     <p>Amask uygulaması yalnızca cihaz üzerinde (lokal olarak) çalışır. Herhangi bir kullanıcı verisi, görsel, metin, ses dosyası, konum veya benzeri içerik <strong>hiçbir şekilde sunucuya gönderilmez veya yedeklenmez</strong>. Tüm işlemler tamamen offline şekilde gerçekleştirilir.</p>
 
     <h2>Uygulama Özellikleri</h2>
-    <p>Amask, görselleri şifreleyip çözme ve isteğe bağlı olarak içine çeşitli veriler (metin, ses, dosya, konum) gömme özellikleri sunar. Bu veriler de yalnızca cihaz üzerinde tutulur ve başka bir yere iletilmez.</p>
+    <p>Amask, görselleri şifreleyip çözme ve isteğe bağlı olarak içine çeşitli veriler (metin, ses, dosya, konum) gömme özellikleri sunar. Bu veriler yalnızca cihaz üzerinde tutulur ve başka bir yere iletilmez.</p>
 
     <h2>Abonelik Sistemi</h2>
     <p>Uygulama içerisinde iki farklı aylık abonelik seçeneği sunulmaktadır:</p>
@@ -53,17 +51,18 @@
       <li><strong>Standart Abonelik:</strong> Tüm görsel şifreleme özelliklerine erişim sağlar. Veri gömme özellikleri bu abonelikte kapalıdır.</li>
       <li><strong>Premium Abonelik:</strong> Hem şifreleme hem de görsele veri (metin, ses, dosya, konum) gömme özelliklerinin tümüne erişim sağlar.</li>
     </ul>
-    <p>Tüm abonelik işlemleri Google Play üzerinden gerçekleştirilir. Uygulama, ödeme bilgilerini doğrudan işlemez veya saklamaz.</p>
+    <p>Ayrıca uygulamanın ücretsiz sürümünde her kullanıcı yalnızca <strong>4 kez</strong> şifreleme işlemi yapabilir. Bu sınır Firebase üzerinden kullanıcı hesabına bağlı olarak takip edilir. Uygulama silinip tekrar yüklense bile, kullanıcı aynı Google hesabıyla giriş yaparsa önceki hakkı korunur.</p>
 
     <h2>Veri Güvenliği</h2>
-    <p>Verileriniz yalnızca cihazınızda saklanır. Hiçbir şekilde dışarı aktarılmaz, sunucuya yüklenmez veya üçüncü taraflarla paylaşılmaz.</p>
+    <p>Verileriniz yalnızca cihazınızda saklanır. Hiçbir şekilde dışarı aktarılmaz, sunucuya yüklenmez veya üçüncü taraflarla paylaşılmaz. Firebase yalnızca kullanıcı giriş ve kullanım hakkı takibi amacıyla kullanılmaktadır.</p>
 
     <h2>Üçüncü Taraflar</h2>
     <p>Amask uygulaması, herhangi bir üçüncü taraf servisle veri paylaşımı yapmaz. Uygulama içi satın alma işlemleri yalnızca Google Play altyapısı ile gerçekleştirilir.</p>
 
     <h2>İletişim</h2>
     <p>Herhangi bir sorunuz veya talepleriniz için bizimle şu adresten iletişime geçebilirsiniz:<br>
-    <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a></p>
+    <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a>
+    </p>
   </div>
 </body>
 </html>
