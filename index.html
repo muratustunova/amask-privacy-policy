@@ -1,68 +1,1025 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amask - Gizlilik Politikası</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 800px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #1a1a1a;
-    }
-    p, li {
-      color: #333;
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Gizlilik Politikası</h1>
-    <p>Bu gizlilik politikası, Amask adlı mobil uygulamanın kullanıcı verileriyle ilgili tutumunu açıklar. Uygulama, kullanıcı gizliliğini ön planda tutmayı taahhüt eder.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://muratustunova.github.io/amask-privacy-policy/" />
+    <title>Amask — Gizlilik Politikası & KVKK</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --border: rgba(255, 255, 255, 0.14);
+        --accent: #7df9ff;
+        --accent2: #a78bfa;
+        --shadow: rgba(0, 0, 0, 0.35);
+      }
 
-    <h2>Veri Toplama ve İşleme</h2>
-    <p>Amask uygulaması yalnızca cihaz üzerinde (lokal olarak) çalışır. Herhangi bir kullanıcı verisi, görsel, metin, ses dosyası, konum veya benzeri içerik <strong>hiçbir şekilde sunucuya gönderilmez veya yedeklenmez</strong>. Tüm işlemler tamamen offline şekilde gerçekleştirilir.</p>
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: rgba(255, 255, 255, 0.85);
+          --text: rgba(8, 10, 22, 0.92);
+          --muted: rgba(8, 10, 22, 0.7);
+          --border: rgba(8, 10, 22, 0.12);
+          --accent: #0ea5e9;
+          --accent2: #7c3aed;
+          --shadow: rgba(15, 23, 42, 0.08);
+        }
+      }
 
-    <h2>Uygulama Özellikleri</h2>
-    <p>Amask, görselleri şifreleyip çözme ve isteğe bağlı olarak içine çeşitli veriler (metin, ses, dosya, konum) gömme özellikleri sunar. Bu veriler yalnızca cihaz üzerinde tutulur ve başka bir yere iletilmez.</p>
+      * {
+        box-sizing: border-box;
+      }
 
-    <h2>Abonelik Sistemi</h2>
-    <p>Uygulama içerisinde iki farklı aylık abonelik seçeneği sunulmaktadır:</p>
-    <ul>
-      <li><strong>Standart Abonelik:</strong> Tüm görsel şifreleme özelliklerine erişim sağlar. Veri gömme özellikleri bu abonelikte kapalıdır.</li>
-      <li><strong>Premium Abonelik:</strong> Hem şifreleme hem de görsele veri (metin, ses, dosya, konum) gömme özelliklerinin tümüne erişim sağlar.</li>
-    </ul>
-    <p>Ayrıca uygulamanın ücretsiz sürümünde her kullanıcı yalnızca <strong>4 kez</strong> şifreleme işlemi yapabilir. Bu sınır Firebase üzerinden kullanıcı hesabına bağlı olarak takip edilir. Uygulama silinip tekrar yüklense bile, kullanıcı aynı Google hesabıyla giriş yaparsa önceki hakkı korunur.</p>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(
+            900px 420px at 12% -10%,
+            color-mix(in srgb, var(--accent) 35%, transparent),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 420px at 95% 5%,
+            color-mix(in srgb, var(--accent2) 35%, transparent),
+            transparent 60%
+          ),
+          linear-gradient(180deg, color-mix(in srgb, var(--bg) 92%, black), var(--bg));
+        min-height: 100vh;
+        padding: 28px 16px 60px;
+      }
 
-    <h2>Veri Güvenliği</h2>
-    <p>Verileriniz yalnızca cihazınızda saklanır. Hiçbir şekilde dışarı aktarılmaz, sunucuya yüklenmez veya üçüncü taraflarla paylaşılmaz. Firebase yalnızca kullanıcı giriş ve kullanım hakkı takibi amacıyla kullanılmaktadır.</p>
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+      }
 
-    <h2>Üçüncü Taraflar</h2>
-    <p>Amask uygulaması, herhangi bir üçüncü taraf servisle veri paylaşımı yapmaz. Uygulama içi satın alma işlemleri yalnızca Google Play altyapısı ile gerçekleştirilir.</p>
+      header {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+      }
 
-    <h2>İletişim</h2>
-    <p>Herhangi bir sorunuz veya talepleriniz için bizimle şu adresten iletişime geçebilirsiniz:<br>
-    <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a>
-    </p>
-  </div>
-</body>
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 14px 40px var(--shadow);
+      }
+
+      .brand h1 {
+        font-size: 20px;
+        line-height: 1.1;
+        margin: 0;
+        letter-spacing: 0.2px;
+      }
+
+      .brand p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      nav {
+        margin: 18px 0 18px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        box-shadow: 0 16px 50px var(--shadow);
+      }
+
+      nav strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px dashed transparent;
+      }
+      nav a:hover {
+        border-bottom-color: color-mix(in srgb, var(--accent) 55%, transparent);
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+        display: grid;
+        gap: 8px;
+      }
+
+      main {
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        box-shadow: 0 16px 50px var(--shadow);
+        padding: 18px 18px 6px;
+      }
+
+      section {
+        padding: 6px 4px 12px;
+      }
+
+      h2 {
+        margin: 16px 0 8px;
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 14px;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      .note {
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 85%, transparent);
+        border-radius: 14px;
+        padding: 12px 12px;
+        margin: 10px 0;
+      }
+
+      .note strong {
+        color: var(--text);
+      }
+
+      .todo {
+        border: 1px solid color-mix(in srgb, var(--accent2) 30%, var(--border));
+        background: color-mix(in srgb, var(--accent2) 10%, var(--card));
+        border-radius: 14px;
+        padding: 12px 12px;
+        margin: 10px 0;
+      }
+
+      .todo strong {
+        color: var(--text);
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 8px 0 0;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 92%, transparent);
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+        background: linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--accent) 22%, var(--card)),
+          color-mix(in srgb, var(--accent2) 18%, var(--card))
+        );
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 650;
+        box-shadow: 0 16px 45px var(--shadow);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        transition: transform 120ms ease;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 92%, transparent);
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 10px 10px;
+        vertical-align: top;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th {
+        color: var(--text);
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        background: color-mix(in srgb, var(--card) 85%, transparent);
+      }
+
+      td {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      details {
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 92%, transparent);
+        border-radius: 14px;
+        padding: 10px 12px;
+        margin: 10px 0 0;
+      }
+
+      summary {
+        cursor: pointer;
+        list-style: none;
+        font-weight: 650;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 2px;
+        user-select: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid color-mix(in srgb, var(--accent) 70%, var(--text));
+        border-bottom: 2px solid color-mix(in srgb, var(--accent) 70%, var(--text));
+        transform: rotate(-45deg);
+        transition: transform 160ms ease;
+        opacity: 0.9;
+      }
+
+      details[open] summary::before {
+        transform: rotate(45deg);
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+
+      a {
+        color: color-mix(in srgb, var(--accent) 92%, white);
+      }
+
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media print {
+        body {
+          background: white;
+          color: black;
+          padding: 0;
+        }
+        nav {
+          display: none;
+        }
+        main {
+          box-shadow: none;
+          border: none;
+          background: white;
+          padding: 0;
+        }
+        p,
+        li,
+        .meta,
+        footer {
+          color: #111;
+        }
+        a {
+          color: #111;
+          text-decoration: underline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Amask — Gizlilik Politikası</h1>
+            <p>Gizlilik politikası ve KVKK aydınlatma metni</p>
+          </div>
+        </div>
+        <div class="meta">
+          Son güncelleme: <strong>2026-01-02</strong>
+          <br />
+          URL:
+          <a href="https://muratustunova.github.io/amask-privacy-policy/">
+            https://muratustunova.github.io/amask-privacy-policy/
+          </a>
+        </div>
+      </header>
+
+      <nav aria-label="İçindekiler">
+        <strong>İçindekiler</strong>
+        <ul>
+          <li><a href="#ozet">Kısa özet</a></li>
+          <li><a href="#veri-sorumlusu-iletisim">Veri sorumlusu</a></li>
+          <li><a href="#toplanan-veriler">Toplanan veriler</a></li>
+          <li><a href="#faaliyetler">İşleme faaliyetleri özeti</a></li>
+          <li><a href="#amaclar">Amaçlar</a></li>
+          <li><a href="#hukuki-dayanak">Hukuki dayanak</a></li>
+          <li><a href="#izinler">İzinler ve cihaz özellikleri</a></li>
+          <li><a href="#odeme">Abonelik / ödeme</a></li>
+          <li><a href="#ucuncu-taraf">Üçüncü taraflar</a></li>
+          <li><a href="#veri-silme">Hesap & veri silme</a></li>
+          <li><a href="#hesap-silme-talebi">Hesap silme talebi</a></li>
+          <li><a href="#saklama">Saklama süresi</a></li>
+          <li><a href="#guvenlik">Güvenlik</a></li>
+          <li><a href="#cocuklar">Çocukların gizliliği</a></li>
+          <li><a href="#haklar">Haklar ve tercihler</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+          <li><a href="#degisiklikler">Değişiklikler</a></li>
+          <li><a href="#kvkk">KVKK Aydınlatma Metni</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section id="ozet">
+          <h2>Kısa özet</h2>
+          <div class="note">
+            <p>
+              <strong
+                >Amask, görsel şifreleme ve isteğe bağlı veri gömme
+                (metin/ses/dosya/konum) işlemlerini ağırlıklı olarak cihazınız
+                üzerinde yapar.</strong
+              >
+              Uygulama; giriş, ücretsiz kullanım hakkı takibi ve abonelik
+              yetkilendirmesi için <strong>Firebase</strong> (Google) altyapısını
+              kullanır. Bu nedenle bazı hesap ve kullanım bilgileri sunucu tarafında
+              işlenebilir/saklanabilir.
+            </p>
+            <div class="badges" aria-label="Özet etiketleri">
+              <span class="badge">Giriş: Google / Firebase Auth</span>
+              <span class="badge">Veritabanı: Cloud Firestore</span>
+              <span class="badge">Abonelik doğrulama: Cloud Functions</span>
+              <span class="badge">Ödeme: Google Play</span>
+              <span class="badge">İçerik işlemleri: cihaz üzerinde</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="veri-sorumlusu-iletisim">
+          <h2>Veri sorumlusu (bu sayfanın sahibi)</h2>
+          <ul>
+            <li><strong>Uygulama adı:</strong> Amask</li>
+            <li><strong>Veri sorumlusu:</strong> Murat Üstünova (bireysel geliştirici)</li>
+            <li><strong>İletişim e‑posta:</strong> <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a></li>
+            <li><strong>Adres:</strong> <code>Meclis mah. Teraziler Cad. Özçağrı Sit. B1/17 SANCAKTEPE/İSTANBUL</code></li>
+          </ul>
+        </section>
+
+        <section id="toplanan-veriler">
+          <h2>Toplanan veriler</h2>
+          <p>
+            Amask’ı kullanmanız sırasında aşağıdaki veri kategorileri işlenebilir:
+          </p>
+          <ul>
+            <li>
+              <strong>Hesap bilgileri (Firebase Authentication / Google ile giriş):</strong>
+              kullanıcı kimliği (UID), e‑posta (varsa), görünen ad (varsa) ve giriş
+              durumuna ilişkin bilgiler.
+            </li>
+            <li>
+              <strong>Uygulama içi kullanım/abonelik bilgileri (Cloud Firestore):</strong>
+              ücretsiz kullanım hakkı sayacı, abonelik seviyesi ve bitiş tarihi,
+              “sorumluluk reddi/onay” durumu, oluşturulma zamanı ve uygulama içi mesaj
+              gibi hesapla ilişkili alanlar.
+            </li>
+            <li>
+              <strong>Satın alma doğrulama bilgileri (Cloud Functions):</strong>
+              ürün kimliği ve satın alma belirteci (<code>purchaseToken</code>)
+              gibi, abonelik doğrulaması için gereken bilgiler.
+            </li>
+            <li>
+              <strong>Uygulama içi ayarlar (cihaz üzerinde):</strong>
+              şifreleme ayarları, uygulama kilidi ayarları (PIN özeti/tuzağı), biyometrik tercih,
+              ekran görüntüsü engeli gibi tercihler (cihazınızda saklanır).
+            </li>
+            <li>
+              <strong>Teknik/işletim verileri:</strong>
+              Firebase ve Google Play altyapısı; hizmetin çalışması ve güvenliği
+              için IP adresi, cihaz/uygulama örneği tanımlayıcıları ve benzeri teknik
+              bilgileri işleyebilir.
+            </li>
+          </ul>
+          <p>
+            <strong>İçerik verileriniz (seçtiğiniz görsel, metin, ses, dosya, konum)</strong>
+            varsayılan olarak cihazınızda işlenir ve saklanır. Amask bu içerikleri
+            kendi sunucularına “yedekleme” amacıyla otomatik olarak yüklemez.
+          </p>
+          <div class="note">
+            <p style="margin: 0">
+              Not: Uygulama içinde “Paylaş / Aktarım” gibi özellikleri kullanırsanız içerikleri
+              <strong>siz</strong> başka uygulamalarla/kişilerle paylaşabilirsiniz. Bu paylaşım, sizin
+              aksiyonunuza bağlıdır.
+            </p>
+          </div>
+        </section>
+
+        <section id="faaliyetler">
+          <h2>İşleme faaliyetleri özeti (pratik tablo)</h2>
+          <p>
+            Aşağıdaki tablo; uygulamanın teknik akışlarına göre (Firebase Auth/Firestore/Functions ve Play Billing)
+            yaygın işleme faaliyetlerini özetler.
+          </p>
+          <table aria-label="İşleme faaliyetleri tablosu">
+            <thead>
+              <tr>
+                <th>Veri / kategori</th>
+                <th>Kaynak</th>
+                <th>Amaç</th>
+                <th>Hizmet</th>
+                <th>Saklama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>UID, e‑posta (varsa), görünen ad (varsa)</td>
+                <td>Google ile giriş / Firebase Auth</td>
+                <td>Oturum açma ve hesap yönetimi</td>
+                <td>Firebase Authentication</td>
+                <td>Hesap aktif olduğu sürece</td>
+              </tr>
+              <tr>
+                <td>Ücretsiz hak sayacı (<code>hakkin</code>), onay kaydı, oluşturulma zamanı</td>
+                <td>Uygulama kullanımı</td>
+                <td>Ücretsiz kullanım yönetimi, temel operasyon</td>
+                <td>Cloud Firestore (<code>users</code>)</td>
+                <td>Hesap aktif olduğu sürece</td>
+              </tr>
+              <tr>
+                <td>Abonelik seviyesi / bitiş tarihi / ürün kimliği</td>
+                <td>Satın alma doğrulaması</td>
+                <td>Abonelik yetkisini uygulamak</td>
+                <td>Cloud Functions + Cloud Firestore (<code>users</code>)</td>
+                <td>Hesap aktif olduğu sürece</td>
+              </tr>
+              <tr>
+                <td>Satın alma belirteci (<code>purchaseToken</code>)</td>
+                <td>Google Play Billing</td>
+                <td>Abonelik doğrulaması ve kötüye kullanım azaltma</td>
+                <td>Cloud Functions + server‑only Firestore (<code>users_private</code>)</td>
+                <td>Doğrulama amacı için gerekli olduğu sürece</td>
+              </tr>
+              <tr>
+                <td>Uygulama ayarları (PIN özeti/tuzağı, tercihler)</td>
+                <td>Cihaz üzeri kullanım</td>
+                <td>Tercihlerin saklanması</td>
+                <td>Cihaz depolaması (SharedPreferences / dosyalar)</td>
+                <td>Silene kadar (cihaz üzerinde)</td>
+              </tr>
+              <tr>
+                <td>Görsel/konum/ses/dosya içerikleri</td>
+                <td>Kullanıcı seçimi</td>
+                <td>Şifreleme / gömme / çözme</td>
+                <td>Cihaz üzerinde</td>
+                <td>Silene kadar (cihaz üzerinde)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="amaclar">
+          <h2>Veri işleme amaçları</h2>
+          <ul>
+            <li>Giriş işlemlerini gerçekleştirmek ve oturum yönetimi sağlamak</li>
+            <li>Ücretsiz kullanım hakkını ve abonelik yetkilerini yönetmek</li>
+            <li>Satın alma/abonelik doğrulamasını yapmak ve kötüye kullanımı azaltmak</li>
+            <li>Uygulama içi temel işlevleri çalıştırmak ve kullanıcı deneyimini sürdürmek</li>
+            <li>Kullanıcı taleplerini/destek başvurularını yanıtlamak</li>
+          </ul>
+        </section>
+
+        <section id="hukuki-dayanak">
+          <h2>Hukuki dayanak (özet)</h2>
+          <p>
+            Türkiye’deki kullanıcılar bakımından kişisel veriler, KVKK m.5’teki hukuki sebeplere dayanarak işlenir.
+            Uygulamanın doğası gereği çoğunlukla:
+          </p>
+          <ul>
+            <li><strong>KVKK m.5/2(c):</strong> sözleşmenin kurulması/ifası (hesap, abonelik)</li>
+            <li><strong>KVKK m.5/2(f):</strong> meşru menfaat (güvenlik, kötüye kullanımın azaltılması)</li>
+          </ul>
+          <p>
+            Kamera/konum/mikrofon gibi izinler, ilgili özellikleri kullanmak istediğinizde istenir ve cihaz ayarlarından
+            yönetilebilir.
+          </p>
+        </section>
+
+        <section id="izinler">
+          <h2>İzinler ve cihaz özellikleri</h2>
+          <p>
+            Uygulama; seçtiğiniz özellikleri çalıştırmak için cihazınızdan aşağıdaki
+            izinleri isteyebilir:
+          </p>
+          <ul>
+            <li><strong>Kamera:</strong> QR aktarımı ve/veya görsel alma işlemleri için</li>
+            <li><strong>Mikrofon:</strong> isteğe bağlı ses kaydı ve gömme işlemleri için</li>
+            <li><strong>Konum:</strong> isteğe bağlı konum bilgisini görsele gömmek için</li>
+            <li>
+              <strong>Depolama/Medya erişimi:</strong> görsel/dosya seçmek ve çıktıları
+              kaydetmek için
+            </li>
+            <li>
+              <strong>Geniş depolama erişimi (Android):</strong> bazı cihazlarda dosya yönetimi/sosyal medya kalkanı gibi
+              akışlar için istenebilir; bu izin verilmediğinde ilgili özellikler kısıtlanabilir.
+            </li>
+            <li>
+              <strong>Biyometrik doğrulama (cihaz desteğine bağlı):</strong> uygulama kilidi
+              gibi güvenlik özellikleri için
+            </li>
+          </ul>
+          <p>
+            Bu izinleri cihaz ayarlarınızdan yönetebilir veya dilediğiniz zaman
+            devre dışı bırakabilirsiniz. Bazı özellikler izin verilmediğinde çalışmayabilir.
+          </p>
+        </section>
+
+        <section id="odeme">
+          <h2>Abonelik / ödeme</h2>
+          <p>
+            Uygulama içi satın alma ve abonelikler Google Play altyapısı üzerinden
+            yürütülür. Ödeme bilgileri (kart bilgisi vb.) Amask tarafından toplanmaz;
+            bu bilgiler Google/ödeme sağlayıcıları tarafından işlenir.
+          </p>
+          <p>
+            Satın alma akışı sırasında Google Play’e, hesabınızla ilişkilendirmeye yardımcı olması için
+            (varsa) kullanıcı kimliğinizden türetilmiş karma (hash) bir değer gönderilebilir.
+          </p>
+          <p>
+            Aboneliğin etkinliğini doğrulamak için ürün kimliği ve satın alma belirteci
+            gibi bilgiler sunucu tarafında doğrulanabilir.
+          </p>
+        </section>
+
+        <section id="ucuncu-taraf">
+          <h2>Üçüncü taraflar</h2>
+          <p>
+            Amask; kimlik doğrulama, veritabanı ve abonelik doğrulama süreçleri için
+            Google/Firebase hizmetlerini kullanır:
+          </p>
+          <ul>
+            <li>Firebase Authentication</li>
+            <li>Cloud Firestore</li>
+            <li>Cloud Functions (abonelik doğrulama)</li>
+            <li>Firebase App Check (kötüye kullanım azaltma)</li>
+            <li>Google Play Billing (satın alma/abonelik)</li>
+          </ul>
+          <p>
+            Bu hizmetler kapsamında veriler, hizmetin teknik gereklilikleri nedeniyle
+            Türkiye dışında işlenebilir/aktarılabilir (ör. Cloud Functions bölgesi).
+          </p>
+        </section>
+
+        <section id="veri-silme">
+          <h2>Hesap & veri silme (kullanıcı talebi)</h2>
+          <p>
+            Uygulama içindeki şifreli içerikleri ve ayarları cihazınızdan kendiniz silebilirsiniz.
+            Firebase tarafında tutulan hesap/kullanım verilerinin silinmesi için öncelikle uygulama içindeki
+            <strong>“Hesabımı Sil ve Çıkış Yap”</strong> seçeneğini kullanabilirsiniz.
+          </p>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Uygulama içinden silme (önerilen yöntem):</strong><br />
+              <strong>Ayarlar</strong> ekranına girin → en alta kaydırın →
+              <strong>Hesabımı Sil ve Çıkış Yap</strong> butonuna basın → uyarıyı okuyup onaylayın.
+              Bu işlem, hesabınızla ilişkili sunucu tarafı verilerini silmeyi ve oturumu kapatmayı hedefler.
+            </p>
+          </div>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Uygulama erişiminiz yoksa (alternatif):</strong> Hesap silme talebi için şu e‑postayı gönderin:
+              <a href="mailto:ustunovamurat@gmail.com?subject=Amask%20-%20Hesap%20Silme%20Talebi">ustunovamurat@gmail.com</a><br />
+              Konu: <code>Amask - Hesap Silme Talebi</code><br />
+              Güvenlik: Talebi mümkünse <strong>uygulamada giriş yaptığınız Google hesabından</strong> gönderin.
+              Farklı bir e‑posta adresinden gelen taleplerde, kötüye kullanım riskine karşı ek doğrulama isteyebiliriz veya talebi işleme alamayabiliriz.
+            </p>
+          </div>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Abonelik uyarısı:</strong> Hesabınızı silmek, Google Play aboneliğinizi otomatik olarak iptal etmez.
+              Ücretlendirme, Google Play hesabınız üzerinden devam edebilir. Abonelik iptali için Google Play’den iptal etmeniz gerekir.
+            </p>
+          </div>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Önemli teknik not:</strong> Amask’ta abonelik doğrulaması, uygulama hesabınızla (Firebase UID) ilişkilendirilebilir.
+              Hesap silme sonrası aynı Google Play aboneliğini yeniden giriş yaptıktan sonra geri yüklemek bazı durumlarda mümkün olmayabilir.
+              Bu nedenle, aktif aboneliğiniz varsa önce Google Play’den iptal edip süresinin bitmesini beklemeniz önerilir.
+            </p>
+          </div>
+          <p>
+            Talepler, kimlik doğrulama ve güvenlik kontrolleri sonrası KVKK’daki süreler çerçevesinde sonuçlandırılır.
+          </p>
+        </section>
+
+        <section id="hesap-silme-talebi">
+          <h2>Hesap silme talebi (Play Console için bağlantı)</h2>
+          <div class="note">
+            <p style="margin: 0">
+              Google Play’in “Account deletion / Hesap silme” gereklilikleri için bu bölümün bağlantısını kullanabilirsiniz:
+              <strong>bu sayfanın</strong> <code>#hesap-silme-talebi</code> ankrajı.
+              <br />
+              Bağlantı:
+              <a href="https://muratustunova.github.io/amask-privacy-policy/#hesap-silme-talebi">
+                https://muratustunova.github.io/amask-privacy-policy/#hesap-silme-talebi
+              </a>
+            </p>
+          </div>
+          <p>
+            Hesap silme talebiniz, hesabınızla ilişkili sunucu tarafı verilerinin silinmesini kapsar. Bu süreç; güvenlik
+            doğrulamaları ve yasal yükümlülükler nedeniyle belirli bir süre alabilir.
+          </p>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Uygulama içinden silme adımları:</strong><br />
+              <strong>Ayarlar</strong> → en alta kaydır → <strong>Hesabımı Sil ve Çıkış Yap</strong> → onayla.
+            </p>
+          </div>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Güvenlik önlemi:</strong> Amask uygulamasında giriş yaptığınız Google hesabını uygulama içinde göstermeyebiliriz.
+              Bu nedenle hesap silme talebinizi <strong>mümkünse aynı Google hesabından</strong> göndermeniz gerekir.
+              Başka bir e‑posta adresinden gönderilen taleplerde, talebin size ait olduğunu doğrulamak için ek bilgi isteyebiliriz.
+            </p>
+          </div>
+          <div class="note">
+            <p style="margin: 0">
+              <strong>Abonelik uyarısı:</strong> Hesap silme, Google Play aboneliğinizi iptal etmez. İptal için Google Play’den işlem yapmanız gerekir.
+              Hesap silme sonrası aboneliğinizi uygulamada geri yükleyememe riski olabileceğinden, aktif aboneliğiniz varsa önce iptal edip bitmesini beklemeniz önerilir.
+            </p>
+          </div>
+          <p>
+            <a class="btn" href="mailto:ustunovamurat@gmail.com?subject=Amask%20-%20Hesap%20Silme%20Talebi&body=Merhaba%2C%0A%0AAmask%20uygulamas%C4%B1ndaki%20hesab%C4%B1m%C4%B1n%20silinmesini%20talep%20ediyorum.%0A%0AG%C3%BCvenlik%20beyan%C4%B1%3A%20Bu%20e-postay%C4%B1%2C%20uygulamada%20giri%C5%9F%20yapt%C4%B1%C4%9F%C4%B1m%20Google%20hesab%C4%B1ndan%20g%C3%B6nderiyorum.%0A%0AUygulamada%20giri%C5%9F%20yapt%C4%B1%C4%9F%C4%B1m%20Google%20hesab%C4%B1%20e-postas%C4%B1%3A%20%5Bburaya%20yaz%C4%B1n%5D%0A%0A(E%C4%9Fer%20talep%20farkl%C4%B1%20bir%20e-postadan%20g%C3%B6nderiliyorsa)%20L%C3%BCtfen%20nedenini%20a%C3%A7%C4%B1klay%C4%B1n%20ve%20do%C4%9Frulama%20i%C3%A7in%20sorular%C4%B1%20yan%C4%B1tlamaya%20haz%C4%B1r%20oldu%C4%9Funuzu%20belirtin.%0A%0ATe%C5%9Fekk%C3%BCrler.">
+              Hesap silme e‑postası oluştur
+            </a>
+          </p>
+          <h2>Silinen veriler</h2>
+          <ul>
+            <li><strong>Firebase Authentication</strong> hesabı (uygulanabilir olduğu ölçüde)</li>
+            <li><strong>Cloud Firestore</strong> içinde kullanıcıya bağlı kayıtlar (örn. <code>users</code> dokümanı)</li>
+            <li><strong>Server-only</strong> abonelik doğrulama kayıtları (örn. <code>users_private</code>)</li>
+          </ul>
+          <h2>Silinmeyebilecek / bizim kontrolümüzde olmayan veriler</h2>
+          <ul>
+            <li><strong>Google Play</strong> satın alma kayıtları ve faturalama geçmişi (Google tarafından tutulur)</li>
+            <li>Hizmet sağlayıcıların zorunlu teknik kayıtları (ör. güvenlik/operasyon logları) ve yasal saklama yükümlülükleri</li>
+          </ul>
+          <h2>Süre</h2>
+          <p>
+            Talepleriniz, başvurunun bize ulaşmasından itibaren kural olarak <strong>30 gün</strong> içinde sonuçlandırılmaya çalışılır.
+          </p>
+        </section>
+
+        <section id="saklama">
+          <h2>Saklama süresi</h2>
+          <p>
+            Hesap ve kullanım/abonelik verileri, hesabınız aktif olduğu sürece ve/veya
+            ilgili amaç için gerekli olduğu müddetçe saklanır. Silme talebiniz için
+            <a href="#iletisim">iletişim</a> bölümündeki e‑posta adresinden bize ulaşabilirsiniz.
+          </p>
+          <ul>
+            <li><strong>Cihaz üzeri içerikler:</strong> siz silene kadar cihazınızda kalır.</li>
+            <li><strong>Hesap & abonelik verileri:</strong> hesap aktif olduğu sürece ve/veya yükümlülükler için gerekli süre boyunca.</li>
+            <li><strong>Satın alma doğrulama kayıtları:</strong> doğrulama ve güvenlik amacı için gerekli olduğu sürece.</li>
+          </ul>
+        </section>
+
+        <section id="guvenlik">
+          <h2>Güvenlik</h2>
+          <ul>
+            <li>Uygulama içi içerik işlemleri (şifreleme/gömme) ağırlıklı olarak cihaz üzerinde yapılır.</li>
+            <li>Sunucu tarafına giden veriler, ilgili servislerin sağladığı güvenli iletişim (TLS) üzerinden iletilir.</li>
+            <li>Yetkisiz erişimi azaltmak için Firebase güvenlik kuralları ve App Check (uygulama bütünlüğü doğrulaması) gibi önlemler kullanılır.</li>
+            <li>Satın alma belirteci gibi hassas veriler, mümkün olduğunda kullanıcıya açık dokümanlarda değil, sunucu tarafında ayrı alanda tutulur.</li>
+          </ul>
+        </section>
+
+        <section id="cocuklar">
+          <h2>Çocukların gizliliği</h2>
+          <p>
+            Amask, çocuklara yönelik tasarlanmamıştır. Yürürlükteki mevzuat uyarınca özel bir rıza gerektiren
+            durumlarda, uygulamanın kullanılmaması veya veli/vasi gözetiminde kullanılması gerekir.
+          </p>
+        </section>
+
+        <section id="haklar">
+          <h2>Haklar ve tercihler</h2>
+          <ul>
+            <li>Uygulama izinlerini (kamera/konum/mikrofon) cihaz ayarlarından yönetebilirsiniz.</li>
+            <li>Oturumu kapatabilir ve gerektiğinde hesabınızın silinmesini talep edebilirsiniz.</li>
+            <li>
+              Türkiye’deki kullanıcılar için KVKK aydınlatma metni:
+              <a href="#kvkk" id="kvkkOpenLink">KVKK metnini görüntülemek için tıklayın</a>
+            </li>
+          </ul>
+          <div class="note" style="margin-top: 12px">
+            <p style="margin: 0">
+              KVKK metni bu sayfanın en altında “KVKK Aydınlatma Metni” başlığı altında yer alır.
+              Yukarıdaki link, metni açıp ilgili bölüme götürür.
+            </p>
+          </div>
+        </section>
+
+        <section id="iletisim">
+          <h2>İletişim</h2>
+          <p>
+            Gizlilikle ilgili soru ve talepleriniz için:
+            <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a>
+          </p>
+        </section>
+
+        <section id="degisiklikler">
+          <h2>Değişiklikler</h2>
+          <p>
+            Uygulama özellikleri, kullanılan hizmetler veya yasal gereklilikler değiştikçe bu metin güncellenebilir.
+            Güncelleme tarihi sayfanın üst kısmında yer alır.
+          </p>
+        </section>
+
+        <section id="kvkk">
+          <h2>KVKK Aydınlatma Metni</h2>
+          <details id="kvkk-details">
+            <summary>KVKK metnini görüntülemek için tıklayın</summary>
+            <section id="veri-sorumlusu" style="padding: 8px 0 0">
+              <h2>Veri sorumlusu</h2>
+              <div class="note">
+                <p>
+                  İşbu aydınlatma metni; <strong>Amask</strong> mobil uygulaması
+                  kapsamında, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”)
+                  uyarınca <strong>veri sorumlusu</strong> sıfatıyla
+                  <strong>Murat Üstünova (bireysel geliştirici)</strong> tarafından hazırlanmıştır.
+                </p>
+                <p>
+                  İletişim:
+                  <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a>
+                </p>
+                <p>
+                  Adres (önerilir):
+                  <code>Meclis mah. Teraziler Cad. Özçağrı Sit. B1/17 SANCAKTEPE/İSTANBUL</code>
+                </p>
+                <p>
+                  Not: Bu sayfa, uygulamanın genel veri işleme faaliyetlerini özetler.
+                  Uygulama özellikleri değiştikçe metin güncellenebilir.
+                </p>
+              </div>
+            </section>
+
+            <section id="islenen" style="padding: 8px 0 0">
+              <h2>İşlenen kişisel veriler</h2>
+              <p>
+                Uygulamanın kullanımı sırasında aşağıdaki kişisel veri kategorileri
+                işlenebilir:
+              </p>
+              <ul>
+                <li>
+                  <strong>Kimlik/iletişim (hesap):</strong> e‑posta (varsa), görünen ad (varsa),
+                  kullanıcı kimliği (UID).
+                </li>
+                <li>
+                  <strong>İşlem güvenliği / teknik veriler:</strong> IP adresi, uygulama örneği
+                  tanımlayıcıları ve hizmetin çalışması için gerekli teknik kayıtlar (Firebase/Google Play
+                  altyapısı tarafından).
+                </li>
+                <li>
+                  <strong>Ürün/abonelik ve kullanım verileri:</strong> abonelik seviyesi, abonelik bitiş tarihi,
+                  ücretsiz kullanım hakkı bilgisi, sorumluluk reddi/onay kaydı ve benzeri uygulama içi alanlar.
+                </li>
+                <li>
+                  <strong>Satın alma doğrulama verileri:</strong> ürün kimliği ve satın alma belirteci
+                  (<code>purchaseToken</code>) gibi doğrulama için gerekli bilgiler.
+                </li>
+              </ul>
+              <div class="note">
+                <p style="margin: 0">
+                  Şeffaflık notu: Uygulamada abonelik doğrulaması için <code>purchaseToken</code> Cloud Functions’a iletilir.
+                  Bu belirteç, doğrulama ve güvenlik amacıyla sunucu tarafında “server-only” bir alanda (örn. Firestore
+                  <code>users_private</code>) tutulabilir; kullanıcıya açık profil alanlarında tutmaktan kaçınılır.
+                </p>
+              </div>
+              <p>
+                <strong>İçerik verileriniz</strong> (şifrelediğiniz/gömme yaptığınız görseller, metin, ses, dosya, konum)
+                varsayılan olarak cihazınızda işlenir ve saklanır; Amask bu içerikleri otomatik olarak sunucularına
+                yedekleme amacıyla yüklemez.
+              </p>
+            </section>
+
+            <section id="amac" style="padding: 8px 0 0">
+              <h2>Amaçlar</h2>
+              <ul>
+                <li>Kimlik doğrulama ve oturum yönetimini sağlamak</li>
+                <li>Ücretsiz kullanım hakkı ve abonelik yetkilendirmesini yönetmek</li>
+                <li>Abonelik/satın alma doğrulamasını gerçekleştirmek</li>
+                <li>Kötüye kullanımı azaltmak ve uygulama güvenliğini artırmak</li>
+                <li>Talep/şikâyet/destek süreçlerini yürütmek</li>
+              </ul>
+            </section>
+
+            <section id="hukuki-sebep" style="padding: 8px 0 0">
+              <h2>Hukuki sebepler</h2>
+              <p>
+                Kişisel veriler, KVKK m.5’te yer alan hukuki sebeplere dayanarak işlenir.
+                Uygulamanın yapısı gereği ağırlıklı olarak:
+              </p>
+              <ul>
+                <li>
+                  <strong>KVKK m.5/2(c):</strong> bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması
+                  (hesap/abonelik yönetimi gibi)
+                </li>
+                <li>
+                  <strong>KVKK m.5/2(f):</strong> veri sorumlusunun meşru menfaati (kötüye kullanımın azaltılması,
+                  güvenliğin sağlanması gibi) — temel hak ve özgürlüklere zarar vermemek kaydıyla
+                </li>
+                <li>
+                  <strong>KVKK m.5/2(e):</strong> bir hakkın tesisi, kullanılması veya korunması (ör. kötüye kullanım,
+                  uyuşmazlık ve taleplerin yönetimi)
+                </li>
+              </ul>
+              <p>
+                Kamera, mikrofon veya konum gibi cihaz izinleri; kullanıcı tarafından ilgili özelliğin
+                kullanımı sırasında istenir ve cihaz ayarlarından yönetilebilir. Gerekli hallerde açık rıza
+                ayrıca talep edilebilir.
+              </p>
+            </section>
+
+            <section id="toplama" style="padding: 8px 0 0">
+              <h2>Toplama yöntemi</h2>
+              <p>
+                Veriler; uygulama içi giriş/abonelik işlemleri, Firebase hizmetleri ve Google Play satın alma
+                altyapısı üzerinden elektronik ortamda otomatik yollarla toplanabilir.
+              </p>
+            </section>
+
+            <section id="aktarim" style="padding: 8px 0 0">
+              <h2>Aktarım / yurt dışı aktarımı</h2>
+              <p>
+                Uygulama kapsamında; kimlik doğrulama, veritabanı ve satın alma doğrulama amaçlarıyla
+                Google/Firebase hizmetlerinden yararlanılır. Bu kapsamda veriler;
+              </p>
+              <ul>
+                <li>Google/Firebase (Firebase Authentication, Cloud Firestore, Cloud Functions, App Check)</li>
+                <li>Google Play (satın alma/abonelik altyapısı)</li>
+              </ul>
+              <p>
+                Bu hizmetlerin veri merkezleri ve hizmet mimarisi nedeniyle kişisel veriler Türkiye dışında
+                işlenebilir/aktarılabilir (ör. Cloud Functions bölgesi <strong>us-central1</strong>). Yurt dışına aktarım
+                süreçleri, KVKK’daki şartlara uygun şekilde yürütülmesi hedeflenir.
+              </p>
+            </section>
+
+            <section id="kvkk-saklama" style="padding: 8px 0 0">
+              <h2>Saklama süresi</h2>
+              <p>
+                Kişisel veriler; ilgili amaç için gerekli olduğu sürece ve mevzuatta öngörülen sürelerle sınırlı
+                kalmak kaydıyla saklanır. Hesap verilerinin silinmesine ilişkin taleplerinizi aşağıdaki başvuru
+                kanallarından iletebilirsiniz.
+              </p>
+              <ul>
+                <li><strong>Hesap verileri:</strong> hesap aktif olduğu sürece; silme talebi sonrası gerekli kontrollerin ardından.</li>
+                <li><strong>Abonelik verileri:</strong> abonelik yetkisinin işletilmesi için gerekli olduğu sürece.</li>
+                <li><strong>İşlem güvenliği kayıtları:</strong> güvenlik ve kötüye kullanımın önlenmesi amacıyla gerekli olduğu sürece.</li>
+              </ul>
+            </section>
+
+            <section id="kvkk-haklar" style="padding: 8px 0 0">
+              <h2>KVKK m.11 kapsamındaki haklarınız</h2>
+              <p>KVKK’nın 11. maddesi kapsamında; kişisel verilerinizle ilgili olarak:</p>
+              <ul>
+                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+                <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                <li>Yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+                <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+                <li>KVKK’daki şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
+                <li>Düzeltme/silme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                <li>Münhasıran otomatik sistemlerle analiz sonucu aleyhe bir sonucun ortaya çıkmasına itiraz etme</li>
+                <li>Kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+              </ul>
+            </section>
+
+            <section id="basvuru" style="padding: 8px 0 0 4px">
+              <h2>Başvuru yöntemi</h2>
+              <p>
+                KVKK kapsamındaki taleplerinizi, kimliğinizi doğrulayacak bilgilerle birlikte e‑posta yoluyla iletebilirsiniz:
+                <a href="mailto:ustunovamurat@gmail.com">ustunovamurat@gmail.com</a>
+              </p>
+              <p>
+                Başvurular, KVKK uyarınca <strong>en geç 30 gün</strong> içinde sonuçlandırılır. Güvenlik nedeniyle,
+                talebin size ait olduğunu doğrulamak için ek bilgi istenebilir.
+              </p>
+              <p>
+                Başvurunuzun reddedilmesi hâlinde, KVKK kapsamında Kişisel Verileri Koruma Kurulu’na şikâyet hakkınız saklıdır.
+              </p>
+            </section>
+
+            <footer>
+              <p>
+                Bu metin bilgilendirme amaçlıdır. Somut faaliyetleriniz (yurt dışına aktarım, saklama süreleri,
+                açık rıza gerektiren haller vb.) için bir KVKK uzmanından/avukattan değerlendirme almanız önerilir.
+              </p>
+            </footer>
+          </details>
+          <noscript>
+            <p class="note">
+              JavaScript kapalıyken de KVKK metnini yukarıdaki başlığa tıklayıp açabilirsiniz.
+            </p>
+          </noscript>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Bu metin bilgilendirme amaçlıdır ve hukuki danışmanlık niteliği taşımaz.
+          Uygulamanın özellikleri değiştikçe politika güncellenebilir.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var kvkkLink = document.getElementById("kvkkOpenLink");
+        var kvkkDetails = document.getElementById("kvkk-details");
+        var kvkkSection = document.getElementById("kvkk");
+        if (!kvkkLink || !kvkkDetails || !kvkkSection) return;
+
+        function openKvkk() {
+          kvkkDetails.open = true;
+          kvkkSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        kvkkLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          openKvkk();
+          history.replaceState(null, "", "#kvkk");
+        });
+
+        if (location.hash === "#kvkk") {
+          setTimeout(openKvkk, 0);
+        }
+      })();
+    </script>
+  </body>
 </html>
